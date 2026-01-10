@@ -1,4 +1,8 @@
-const data = require('./data');
-const searchElement = require('./searchElement');
-
-searchElement(data.tab, data.element);
+var  {searchElement}  =  require('./searchElement') 
+var  {data}  =  require('./data')
+searchElement(data,  function  (err,  result)  { 
+if (err)
+console.error("erreur  :"  +  err) 
+else
+console.log(data.filtre  +  "  existe  a  la  position  "  +  result)
+});

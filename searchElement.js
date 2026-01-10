@@ -1,11 +1,6 @@
-function searchElement(tab, element) {
-    let position = tab.indexOf(element);
-
-    if (position !== -1) {
-        console.log("Élément trouvé à la position :", position);
-    } else {
-        console.log("Erreur : élément non trouvé dans le tableau");
-    }
-}
-
-module.exports = searchElement;
+exports.searchElement  =  function  (data,  callback)  { 
+for  (var  i  =  0;  i  <  data.tableau.length;  i++)
+if  (data.tableau[i]  ==  data.filtre) 
+return  callback(null,  i);
+return  callback('Element  '  +  data.filtre  +  '  non  retrouvé  dans  le  tableau');
+};
